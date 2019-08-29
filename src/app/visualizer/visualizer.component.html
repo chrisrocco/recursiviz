@@ -5,10 +5,13 @@
     <div id="code-panel">
 
       <div class="form-group">
+        <div>
+          <em>argument list</em>
+        </div>
         <div class="input-group">
           <input type="text" #argStringInput class="form-control" name="" placeholder="Enter JS Arguments.." [(ngModel)]="args">
           <span class="input-group-btn">
-            <button (click)="submitCode(argStringInput.value, text)" type="submit" class="btn btn-primary">
+            <button (click)="submitCode()" type="submit" class="btn btn-primary">
               <i class="icon wb-upload"></i> Submit Code </button>
           </span>
         </div>
@@ -17,7 +20,7 @@
       <div ace-editor
            [(text)]="text"
            mode="javascript"
-           style="height: 600px; font-size: 18px">
+           style="height: 600px; font-size: 16px">
       </div>
 
       <div class="example">
